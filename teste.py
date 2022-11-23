@@ -2,7 +2,7 @@ import requests
 
 
 def habilidades(poke):
-    print(f"Habilidades de {pokemon}")
+    print(f"{pokemon} abilities:")
     for i in poke['abilities']:
         print(i['ability']['name'])
 
@@ -11,16 +11,8 @@ def tipo(poke):
         type = i['type']
     print(f"Type:{type.get('name')}")
 
-def main():
-    global pokemon
-    pokemon = str(input('Qual o Pokémon?'))
-    api = f'https://pokeapi.co/api/v2/pokemon/{pokemon}'
+def getpokemoninfo(inp):
+    api = f'https://pokeapi.co/api/v2/pokemon/{inp}'
     res = requests.get(api)
     poke = res.json()
-    habilidades(poke)
-    tipo(poke)
-
-if __name__ == '__main__':
-    main()
-    
-    
+    return poke
