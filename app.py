@@ -1,37 +1,17 @@
-import requests
-from teste import habilidades, tipo, getpokemoninfo
+from functions import getpokemoninfo, habilidades, tipo
 
-import tkinter as tk
+pokemon = input("What's the Pokémon? \n")
 
-# Top level window
-frame = tk.Tk()
-frame.title("TextBox Input")
-frame.geometry('400x200')
-# Function for getting Input
-# from textbox and printing it
-# at label widget
-getpokemoninfo('pikachu')
+poke_info = getpokemoninfo(pokemon)
 
-def get_input():
-    inp = inputtxt.get(1.0, "end-1c")
-    return inp
+tipo = tipo(poke_info)
 
+ab = habilidades(poke_info)
 
-# TextBox Creation
-inputtxt = tk.Text(frame,
-				height = 5,
-				width = 20)
+abilities = ", ".join(ab)
 
-inputtxt.pack()
+print(f"Type: {tipo.capitalize()}")
 
-# Button Creation
-printButton = tk.Button(frame,
-						text = "Print",
-						command = get_input)
-printButton.pack()
+print(f"Abilities: {abilities.capitalize()}")
 
-# Label Creation
-lbl = tk.Label(frame, text = "")
-lbl.pack()
-frame.mainloop()
 
