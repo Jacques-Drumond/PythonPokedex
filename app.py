@@ -1,8 +1,8 @@
-from functions import getpokemoninfo, habilidades, tipo
+from functions import getpokemoninfo, habilidades, tipo, get_image
 from tkinter import *
 
 ws = Tk()
-ws.title("PythonGuides")
+ws.title("Pokédex")
 ws.geometry('400x300')
 ws['bg'] = '#ffbf00'
 
@@ -15,6 +15,7 @@ def printValue():
     print(f"Pokémon: {pokemon.capitalize()}")
     print(f"Type: {tipo.capitalize()}")
     print(f"Abilities: {abilities.capitalize()}")
+    get_image(poke_info)
 
 
 player_name = Entry(ws)
