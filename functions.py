@@ -1,4 +1,7 @@
 import requests
+from PIL import Image
+from io import BytesIO
+
 
 
 def habilidades(poke):
@@ -18,3 +21,20 @@ def getpokemoninfo(pokemon):
     res = requests.get(api)
     poke = res.json()
     return poke
+
+def get_image(poke):
+    for i in poke['sprites']['front_default']:
+        image = i
+    return image
+        
+
+
+url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+from PIL import Image
+import requests
+from io import BytesIO
+
+url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
+img.show()

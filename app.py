@@ -10,9 +10,9 @@ def printValue():
     global pokemon, tipo
     pokemon = player_name.get()
     poke_info = getpokemoninfo(pokemon)
-    print(poke_info)
     tipo = tipo(poke_info)
     abilities = ", ".join(habilidades(poke_info))
+    print(f"Pokémon: {pokemon.capitalize()}")
     print(f"Type: {tipo.capitalize()}")
     print(f"Abilities: {abilities.capitalize()}")
 
@@ -22,7 +22,7 @@ player_name.pack(pady=30)
 
 Button(
     ws,
-    text="Register Player", 
+    text="Submit", 
     padx=10, 
     pady=5,
     command=printValue
