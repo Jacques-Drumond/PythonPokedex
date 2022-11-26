@@ -14,3 +14,12 @@ def my_sum(*args):
 
 my_list = [1, 2, 3,45]
 my_sum(*my_list)
+
+
+
+def person(**kwargs):
+    for name, what_is in kwargs.items():
+        print(f"{name} is a {what_is}")
+
+
+person(banana= "fruit", potato= "vegetable")
