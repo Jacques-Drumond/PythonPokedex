@@ -6,9 +6,9 @@ poke_info = getpokemoninfo(pokemon)
 
 tipo = tipo(poke_info)
 
-ab = habilidades(poke_info)
 
-abilities = ", ".join(ab)
+
+abilities = ", ".join(habilidades(poke_info))
 
 print(f"Type: {tipo.capitalize()}")
 
