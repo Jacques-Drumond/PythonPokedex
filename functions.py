@@ -2,8 +2,6 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-
-
 def habilidades(poke):
     ab = []
     for i in poke['abilities']:
@@ -21,8 +19,6 @@ def getpokemoninfo(pokemon):
     res = requests.get(api)
     poke = res.json()
     return poke
-
-
 
 
 def get_image(a):

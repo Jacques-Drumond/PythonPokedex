@@ -1,0 +1,20 @@
+html,body,#container {
+    height:100%;
+}
+#container {
+    width:100%;
+    position:relative;
+}
+#container > img {
+    width:100%;
+    max-width:600px; /* real image width */
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin:auto;
+}
+
+
+.pokeimage {
+    text-align: center;
+    width:30%
+}
