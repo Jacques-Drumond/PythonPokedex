@@ -1,42 +1,14 @@
-html,body,#container {
-    height:100%;
-}
-#container {
-    width:100%;
-    position:relative;
-}
-#container > img {
-    width:100%;
-    max-width:600px; /* real image width */
-    position:absolute;
-    top:0; left:0; right:0; bottom:0;
-    margin:auto;
-}
-
-
-.pokeimage {
-    text-align: center;
-    width:30%
-}
-
-.button {
-    background: color-btn;
-    border-radius: 0.7em;
-    box-shadow: 0 5px 0 #0A7237;
-    color: #fff;
-    font-size: 2em;
-    font-weight: 500;
-    text-shadow: 0 2px 0 #0A7237;
-    text-align: center;
+.Pokedex {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+  .Pokemon {
+    display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 148px;
-    height: 70px;
-    margin-left: -(148px/2);
-    margin-top: -(70px/2);
-    will-change: transform;
-    transform: translateY(0px) translateZ(0px);
-    line-height: 70px;
-    transition: all (hover - 100) ease;
-}
+    margin-left: 740px;
+    margin-top: 150px;
+    margin-right: auto;
+    width: 20%;
+  }
